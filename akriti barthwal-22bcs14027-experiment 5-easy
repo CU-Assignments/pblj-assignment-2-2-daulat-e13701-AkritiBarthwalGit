@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class AutoBoxingExample {
+    public static void main(String[] args) {
+        // Creating an integer array
+        int[] values = {10, 20, 30, 40, 50};
+
+        // Creating a list of Integer objects (Autoboxing happens here)
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int value : values) {
+            numbers.add(value);  // Autoboxing: int → Integer
+        }
+
+        // Calculating the sum (Unboxing happens here)
+        int sum = 0;
+        for (Integer num : numbers) {
+            sum += num;  // Unboxing: Integer → int
+        }
+
+        // Printing the sum
+        System.out.println("Sum of numbers: " + sum);
+    }
+}
